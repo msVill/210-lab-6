@@ -13,7 +13,19 @@ Comsc-210 | Lab #6 | Martha Stephanie Villalta
 #include <iostream>
 using namespace std;
 
+const int SIZE = 5;
+
+//function prototypes
+double* enterArrayData();
+double* outputArrayData();
+double* sumArray();
+
 int main() {
+    //Step 1: Create a double array w/SIZE var as index/size calc.:
+    //Step 3: Get user input for array to calc. and returns the sum
+    // to the calling program- main() through the pointer...?
+    //step 2: Pass the array to the 3 other functions.
     cout << "Lab 6 starting point!" << endl;
     return 0;
 }
+
