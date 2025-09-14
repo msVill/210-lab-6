@@ -35,6 +35,23 @@ int main() {
 
     //Receives dynamic double array from main()
 double* enterArrayData(double* arr, int size) {
-    //Need to receive user input for array.
-    cin >> 
+    //Need to receive user input for array
+    //and populates the array w/the values.
+    //To cycle through the array and populate it w/data,
+    //it needs a loop function. Like in example code.
+    for(int i = 0; i < SIZE; i++) {
+        cout << "> Element #" << i << ": ";
+        cin >> *(arr + i);
+    }
+}
+
+double* outputArrayData(double* arr, int size) {
+    for(int i = 0; i < SIZE; i++) {
+        cout << *(arr + i) << " ";
+    }
+    cout << endl;
+}
+
+double* sumArray(double* arr, int size) {
+
 }
