@@ -21,11 +21,20 @@ double* outputArrayData();
 double* sumArray();
 
 int main() {
-    //Step 1: Create a double array w/SIZE var as index/size calc.:
-    //Step 3: Get user input for array to calc. and returns the sum
-    // to the calling program- main() through the pointer...?
-    //step 2: Pass the array to the 3 other functions.
+    double* ptr1 = nullptr;
+    ptr1 = new double[SIZE];
+
+    //Pass the array to the 3 other functions.
+    void enterArrayData(double* arr, int size);
+    void outputArrayData(double* arr, int size);
+    double sumArray(double* arr, int size);
+    
     cout << "Lab 6 starting point!" << endl;
     return 0;
 }
 
+    //Receives dynamic double array from main()
+double* enterArrayData(double* arr, int size) {
+    //Need to receive user input for array.
+    cin >> 
+}
