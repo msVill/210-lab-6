@@ -16,12 +16,12 @@ using namespace std;
 const int SIZE = 5;
 
 //function prototypes
-double* enterArrayData();
-double* outputArrayData();
+void enterArrayData();
+void outputArrayData();
 double* sumArray();
 
 int main() {
-    double* ptr1 = nullptr;
+    double* ptr1 = nullptr; 
     ptr1 = new double[SIZE];
 
     //Pass the array to the 3 other functions.
@@ -39,19 +39,24 @@ double* enterArrayData(double* arr, int size) {
     //and populates the array w/the values.
     //To cycle through the array and populate it w/data,
     //it needs a loop function. Like in example code.
-    for(int i = 0; i < SIZE; i++) {
+    for(int i = 0; i < size; i++) {
         cout << "> Element #" << i << ": ";
         cin >> *(arr + i);
+        double total = sumArray(ptr1, SIZE);
     }
 }
 
 double* outputArrayData(double* arr, int size) {
-    for(int i = 0; i < SIZE; i++) {
+    for(int i = 0; i < size; i++) {
         cout << *(arr + i) << " ";
     }
     cout << endl;
 }
 
 double* sumArray(double* arr, int size) {
-
+    double sum = 0;
+    for(int i = 0; i < size; i++) {
+        sum += *(arr + i);
+    }
+    return sum;
 }
