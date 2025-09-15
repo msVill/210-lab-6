@@ -16,44 +16,44 @@ using namespace std;
 const int SIZE = 5;
 
 //function prototypes
-void enterArrayData();
-void outputArrayData();
-double* sumArray();
+void enterArrayData(double* arr, int size);
+void outputArrayData(double* arr, int size);
+double sumArray(double* arr, int size);
 
 int main() {
     double* ptr1 = nullptr; 
     ptr1 = new double[SIZE];
 
-    //Pass the array to the 3 other functions.
-    void enterArrayData(double* arr, int size);
-    void outputArrayData(double* arr, int size);
-    double sumArray(double* arr, int size);
+    enterArrayData(ptr1, SIZE);
+    outputArrayData(ptr1, SIZE);
+    double total = sumArray(ptr1, SIZE);
     
-    cout << "Lab 6 starting point!" << endl;
+    cout << "Sum of values: " << total << endl;
+
+    delete[] ptr1;
+    ptr1 = nullptr;
+
     return 0;
 }
 
     //Receives dynamic double array from main()
-double* enterArrayData(double* arr, int size) {
-    //Need to receive user input for array
-    //and populates the array w/the values.
-    //To cycle through the array and populate it w/data,
-    //it needs a loop function. Like in example code.
+void enterArrayData(double* arr, int size) {
+    cout << "Data Entry for the Array:" << endl;
     for(int i = 0; i < size; i++) {
-        cout << "> Element #" << i << ": ";
-        cin >> *(arr + i);
-        double total = sumArray(ptr1, SIZE);
+        cout << " > Element #" << i << ": ";
+        cin >> *(arr + i); //Pointer notation.
     }
 }
 
-double* outputArrayData(double* arr, int size) {
+void outputArrayData(double* arr, int size) {
+    cout << "Outputting Array Elements: ";
     for(int i = 0; i < size; i++) {
         cout << *(arr + i) << " ";
     }
     cout << endl;
 }
 
-double* sumArray(double* arr, int size) {
+double sumArray(double* arr, int size) {
     double sum = 0;
     for(int i = 0; i < size; i++) {
         sum += *(arr + i);
