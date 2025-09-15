@@ -38,7 +38,7 @@ int main() {
 
     //Receives dynamic double array from main()
 void enterArrayData(double* arr, int size) {
-    cout << "Data Entry for the Array:" << endl;
+    cout << "Data entry for the array:" << endl;
     for(int i = 0; i < size; i++) {
         cout << " > Element #" << i << ": ";
         cin >> *(arr + i); //Pointer notation.
@@ -46,7 +46,7 @@ void enterArrayData(double* arr, int size) {
 }
 
 void outputArrayData(double* arr, int size) {
-    cout << "Outputting Array Elements: ";
+    cout << "Outputting array elements: ";
     for(int i = 0; i < size; i++) {
         cout << *(arr + i) << " ";
     }
