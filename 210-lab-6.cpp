@@ -16,23 +16,24 @@ const int SIZE = 5;
 // Function Prototypes:
 void enterArrayData(double *);
 void outputArrayData(double *);
-double * sumArray();
+double sumArray();
 
 int main() {
-    double * ptr = nullptr;
-    ptr = new double[SIZE];
+    double * ptr = nullptr; // we are creaitng a pointer variable
+    ptr = new double[SIZE]; // allocating an unnamed memory location with size of SIZE (5).
 
     return 0;
 }
 
-void enterArrayData(double *ptrVar) {
+void enterArrayData(double *ptrVar) { // Okay, so if this function needs to allocate user input into the arra, then how can I do that?
+    for(int i = 0; i < SIZE; i++) {
+        cout << "Enter Values of Decimal Numbers";
+        cin >> *(ptrVar + 1);
+    }
 }
 
 void outputArrayData(double *) {
-
 }
 
-double * sumArray() {
-
-    return 
+double sumArray() {
 }
