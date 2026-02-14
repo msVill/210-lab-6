@@ -22,18 +22,10 @@ int main() {
     double * ptr = nullptr;
     ptr = new double[SIZE];
 
-    
-
-
     return 0;
 }
 
-void enterArrayData() {
-    double *arr1 = nullptr;
-    for(int i = 0; i < SIZE; i++) {
-        arr1[i] = ;
-    }
-    return arr1;
+void enterArrayData(double *ptrVar) {
 }
 
 void outputArrayData(double *) {
