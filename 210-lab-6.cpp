@@ -19,11 +19,20 @@ void outputArrayData(double *);
 double * sumArray();
 
 int main() {
+    double * ptr = nullptr;
+    ptr = new double;
+    
 
     return 0;
 }
 
 double * enterArrayData() {
+    double *arr1 = nullptr;
+    arr1 = new int[SIZE];
+    for(int i = 0; i < SIZE; i++) {
+        arr1[i] = ;
+    }
+    return arr1;
 }
 
 void outputArrayData(double *) {
@@ -31,5 +40,6 @@ void outputArrayData(double *) {
 }
 
 double * sumArray() {
-    
+
+    return 
 }
