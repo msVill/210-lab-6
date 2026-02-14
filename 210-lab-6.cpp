@@ -14,21 +14,22 @@ using namespace std;
 const int SIZE = 5;
 
 // Function Prototypes:
-double * enterArrayData();
+void enterArrayData(double *);
 void outputArrayData(double *);
 double * sumArray();
 
 int main() {
     double * ptr = nullptr;
-    ptr = new double;
+    ptr = new double[SIZE];
+
     
+
 
     return 0;
 }
 
-double * enterArrayData() {
+void enterArrayData() {
     double *arr1 = nullptr;
-    arr1 = new int[SIZE];
     for(int i = 0; i < SIZE; i++) {
         arr1[i] = ;
     }
