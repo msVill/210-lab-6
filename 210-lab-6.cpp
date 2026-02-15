@@ -19,6 +19,9 @@ int main() {
     cout << endl << endl;
     cout << "Sum of values: " << sumArray(ptr);
     cout << endl << endl;
+
+    delete [] ptr;
+    ptr = nullptr;
     return 0;
 }
 
