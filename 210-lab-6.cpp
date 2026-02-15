@@ -39,7 +39,7 @@ void outputArrayData(double *ptrVar) {
 double sumArray(double *ptrVar) {
     double sum = 0;
     for(int i = 0; i < SIZE; i++) {
-        sum += *ptrVar;
+        sum += *(ptrVar + i);
     }
 
     return sum;
