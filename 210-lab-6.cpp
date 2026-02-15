@@ -24,21 +24,30 @@ int main() {
     cout << "Data entry for the array: " << endl;
     enterArrayData(ptr);
 
+
     return 0;
 }
 
 void enterArrayData(double* ptrVar) { // Okay, so if this function needs to allocate user input into the arra, then how can I do that?
     for(int i = 0; i < SIZE; i++) {
-        cout << "> Element #" << i << ": ";
+        cout << "\t> Element #" << i << ": ";
         cin >> *(ptrVar + i);
     }
+    cout << "Data entry complete." << endl << endl;
 }
 
 void outputArrayData(double *ptrVar) {
     for(int i = 0; i < SIZE; i++) {
+        cout << "Outputting array elements: ";
         cout << *ptrVar << " ";
     }
 }
 
-// double sumArray() {
-// }
+double sumArray(double *ptrVar) {
+    double sum = 0;
+    for(int i = 0; i < SIZE; i++) {
+        sum += *ptrVar;
+    }
+
+    return sum;
+}
