@@ -5,7 +5,7 @@ using namespace std;
 const int SIZE = 5;
 
 // Function Prototypes:
-void enterArrayData(double *);
+void enterArrayData(double *); // will receive a pointer of an array
 void outputArrayData(double *);
 double sumArray(double *);
 
@@ -13,7 +13,7 @@ int main() {
     double * ptr = nullptr; // we are creaitng a pointer variable
     ptr = new double[SIZE]; // allocating an unnamed memory location with size of SIZE (5).
     cout << "Data entry for the array:" << endl;
-    enterArrayData(ptr);
+    enterArrayData(ptr); // passing the pointer variable as an argument to the functions.
     cout << "Outputting array elements: ";
     outputArrayData(ptr);
     cout << endl << endl;
@@ -23,7 +23,7 @@ int main() {
 }
 
 void enterArrayData(double* ptrVar) { 
-    for(int i = 0; i < SIZE; i++) {
+    for(int i = 0; i < SIZE; i++) { // iterate over/through each index of the array by SIZE val.
         cout << "\t> Element #" << i << ": ";
         cin >> *(ptrVar + i);
     }
